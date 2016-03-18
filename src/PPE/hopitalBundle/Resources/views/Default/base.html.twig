@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Hopital{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+
+        <link rel="stylesheet" href="{{ asset('bundles/ppehopital/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/ppehopital/css/style.css') }}">
+        {% block stylesheets %}{% endblock %}
+    </head>
+
+    <body>
+<div class="navbar-wrapper">
+    <div class="container-fluid">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="{{ path('accueil') }}">HOPITAL</a>
+                                </div>
+                                <div id="navbar" class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav">
+                                        <li class="active"><a href="{{ path('accueil') }}" class="">Accueil</a></li>
+                                        <li class=" dropdown">
+                                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="{{ path('chirurgie') }}">Chirurgie</a></li>
+                                                <li><a href="{{ path('radiologie') }}">Radiologie</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class=""><a href="{{ path('informations') }}" class="">Informations</a></li>
+                                    </ul>
+                                    <ul class="nav navbar-nav pull-right">
+                                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Se connecter <span class="caret"></span></a>
+                                            <div class="dropdown-menu" style="padding: 10px; padding-bottom: 10px;">
+                                                <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+                                                  <input id="user_username" style="margin-bottom: 15px;" type="text" placeholder="Utilisateur" size="30" />
+                                                  <input id="user_password" style="margin-bottom: 15px;" type="password" placeholder="Mot de passe" size="30" />
+                                                  <input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
+                                                  <label class="string optional" for="user_remember_me">Se souvenir</label>
+                                                 
+                                                  <input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Connexion" />
+                                                </form>
+                                            </div>
+                                        </li>
+                                    
+                                        <li class=""><a href="#">S'enregistrer</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>    
+                    </div>
+                </div>
+                 {% block body %}{% endblock %}                       
+        <script src="{{ asset('bundles/ppehopital/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('bundles/ppehopital/js/bootstrap.min.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

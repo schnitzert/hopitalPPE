@@ -1,0 +1,4 @@
+pp_ehopital:
+    resource: "@PPEhopitalBundle/Resources/config/routing.yml"
+    prefix:   /
+

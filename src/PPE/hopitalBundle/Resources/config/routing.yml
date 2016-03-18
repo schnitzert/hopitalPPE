@@ -1,0 +1,16 @@
+accueil:
+    path:     /hopital
+    defaults: { _controller: PPEhopitalBundle:Default:accueil }
+chirurgie:
+    path:     /hopital/services/chirurgie
+    defaults: { _controller: PPEhopitalBundle:Default:chirurgie }
+radiologie:
+    path:     /hopital/services/radiologie
+    defaults: { _controller: PPEhopitalBundle:Default:radiologie }
+informations:
+    path:     /hopital/informations
+    defaults: { _controller: PPEhopitalBundle:Default:informations }
+profile:
+    path:     /hopital/profile
+    defaults: { _controller: PPEhopitalBundle:Default:profile }
+
