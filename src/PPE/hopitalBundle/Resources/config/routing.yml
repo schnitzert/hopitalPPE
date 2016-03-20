@@ -1,16 +1,25 @@
 accueil:
     path:     /hopital
     defaults: { _controller: PPEhopitalBundle:Default:accueil }
+urgences:
+    path:     /hopital/services/urgences
+    defaults: { _controller: PPEhopitalBundle:Default:urgences }
+pediatrie:
+    path:     /hopital/services/pediatrie
+    defaults: { _controller: PPEhopitalBundle:Default:pediatrie }
 chirurgie:
     path:     /hopital/services/chirurgie
     defaults: { _controller: PPEhopitalBundle:Default:chirurgie }
-radiologie:
-    path:     /hopital/services/radiologie
-    defaults: { _controller: PPEhopitalBundle:Default:radiologie }
+imagerie:
+    path:     /hopital/services/imagerie
+    defaults: { _controller: PPEhopitalBundle:Default:imagerie }
 informations:
     path:     /hopital/informations
     defaults: { _controller: PPEhopitalBundle:Default:informations }
 profile:
     path:     /hopital/profile
     defaults: { _controller: PPEhopitalBundle:Default:profile }
+contact:
+    path:     /hopital/contact
+    defaults: { _controller: PPEhopitalBundle:Default:contact }
 

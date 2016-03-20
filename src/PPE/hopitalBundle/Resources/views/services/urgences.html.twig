@@ -1,0 +1,24 @@
+{% extends 'PPEhopitalBundle:Default:base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h1>Urgences</h1>
+                <p>Le service des urgences comprend quatre secteurs d&rsquo;activit&eacute; :</p>
+                <p>&bull;&nbsp;<strong>un secteur d&rsquo;accueil</strong>&nbsp;qui permet &agrave; l&rsquo;infirmi&egrave;re d&rsquo;orientation et d&rsquo;accueil &agrave; partir de l&rsquo;interrogatoire initial et de prise de constantes, de d&eacute;finir le choix de l&rsquo;orientation la mieux adapt&eacute;e au malade et sa symptomatologie.</p>
+                <p>&bull;&nbsp;<strong>un circuit court adulte</strong>&nbsp;pr&eacute;vu pour accueillir des malades ou des bless&eacute;s devant b&eacute;n&eacute;ficier d&rsquo;immobilisation de membre, des sutures ne n&eacute;cessitant pas d&rsquo;hospitalisation.</p>
+                <p>&bull;&nbsp;<strong>un secteur d&rsquo;hospitalisation</strong>&nbsp;permettant une surveillance clinique de courte dur&eacute;e : 20 lits, 10 lits porte et 2 salles de d&eacute;choquage.</p>
+                <p>&bull;&nbsp;<strong>un secteur d&rsquo;urgences p&eacute;diatriques</strong>&nbsp;pr&eacute;vu pour accueillir des enfants &acirc;g&eacute;s jusqu&rsquo;&agrave; 15 ans et 3 mois maximum : 2 salles de d&eacute;choquage.</p>
+                <p>Le service dispose &eacute;galement d&rsquo;une &eacute;quipe mobile g&eacute;riatrique, d&rsquo;une infirmi&egrave;re psy de 8 heures &agrave; 20 heures, d&rsquo;un psychiatre bi-quotidiennement, en partenariat avec EPSMAL (&Eacute;tablissement Public de Sant&eacute; Mentale Agglom&eacute;ration Lilloise), d&rsquo;une &eacute;quipe mobile d&rsquo;addictologie et d&rsquo;une &eacute;quipe mobile de R&eacute;&eacute;coute Suicidant.</p>
+            </div>
+            <div class="col-md-8">
+                </br>
+                <img class="img-responsive img-rounded" src="{{ asset('bundles/ppehopital/images/urgences.jpg') }}" alt="">
+            </div>
+            <div class="col-md-8">
+                </br><p>Le service travaille en partenariat avec la Maison de Sant&eacute;, qui permet de rencontrer un m&eacute;decin de ville de 20h &agrave; minuit du lundi au vendredi ainsi que le week-end.</p>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

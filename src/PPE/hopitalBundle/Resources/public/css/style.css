@@ -1,6 +1,16 @@
 body{
     background: #78CBFD;
-    padding-top: 62px;
+    padding-top: 65px;
+}
+.carousel{
+  margin-top: -10px;
+  min-height: 400px;
+  max-height: 400px;
+  overflow: hidden;
+}
+.carousel img{
+  width: 100%;
+
 }
 .navbar, .dropdown-menu{
 background:rgba(128,128,128,0.4);

@@ -10,13 +10,21 @@ class DefaultController extends Controller
     {
         return $this->render('PPEhopitalBundle:Default:accueil.html.twig');
     }
+    public function urgencesAction()
+    {
+        return $this->render('PPEhopitalBundle:services:urgences.html.twig');
+    }
+    public function pediatrieAction()
+    {
+        return $this->render('PPEhopitalBundle:services:pediatrie.html.twig');
+    }
     public function chirurgieAction()
     {
-        return $this->render('PPEhopitalBundle:Default:chirurgie.html.twig');
+        return $this->render('PPEhopitalBundle:services:chirurgie.html.twig');
     }
-    public function radiologieAction()
+    public function imagerieAction()
     {
-        return $this->render('PPEhopitalBundle:Default:radiologie.html.twig');
+        return $this->render('PPEhopitalBundle:services:imagerie.html.twig');
     }
     public function informationsAction()
     {
@@ -26,5 +34,8 @@ class DefaultController extends Controller
     {
         return $this->render('PPEhopitalBundle:Default:profile.html.twig');
     }
-
+    public function contactAction()
+    {
+        return $this->render('PPEhopitalBundle:Default:contact.html.twig');
+    }
 }

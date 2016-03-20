@@ -23,19 +23,24 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                     </button>
-                                    <a class="navbar-brand" href="{{ path('accueil') }}">HOPITAL</a>
+                                    <a class="navbar-brand" href="{{ path('accueil') }}"><img style="max-width:100px; margin-top: -7px;"
+             src="{{ asset('bundles/ppehopital/images/logo.jpg') }}"></a>
                                 </div>
                                 <div id="navbar" class="navbar-collapse collapse">
                                     <ul class="nav navbar-nav">
-                                        <li class="active"><a href="{{ path('accueil') }}" class="">Accueil</a></li>
-                                        <li class=" dropdown">
+                                        <li class="{% if app.request.attributes.get('_route') == "accueil" %}active{% endif %}"><a href="{{ path('accueil') }}" class="">Accueil</a></li>
+                                        <li class="dropdown {% if app.request.attributes.get('_route') in ["urgences","chirurgie","imagerie","pediatrie"] %}active{% endif %}">
                                             <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
                                             <ul class="dropdown-menu">
+                                                <li><a href="{{ path('urgences') }}">Urgences</a></li>
                                                 <li><a href="{{ path('chirurgie') }}">Chirurgie</a></li>
-                                                <li><a href="{{ path('radiologie') }}">Radiologie</a></li>
+                                                <li><a href="{{ path('imagerie') }}">Imagerie médical</a></li>
+                                                <li><a href="{{ path('pediatrie') }}">Pédiatrie</a></li>
+  
                                             </ul>
                                         </li>
-                                        <li class=""><a href="{{ path('informations') }}" class="">Informations</a></li>
+                                        <li class="{% if app.request.attributes.get('_route') == "informations" %}active{% endif %}"><a href="{{ path('informations') }}" class="">Informations</a></li>
+                                        <li class="{% if app.request.attributes.get('_route') == "contact" %}active{% endif %}"><a href="{{ path('contact') }}" class="">Contact</a></li>
                                     </ul>
                                     <ul class="nav navbar-nav pull-right">
                                         <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Se connecter <span class="caret"></span></a>
