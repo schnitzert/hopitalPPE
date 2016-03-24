@@ -43,21 +43,25 @@
                                         <li class="{% if app.request.attributes.get('_route') == "contact" %}active{% endif %}"><a href="{{ path('contact') }}" class="">Contact</a></li>
                                     </ul>
                                     <ul class="nav navbar-nav pull-right">
+                                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+                                    <li class="{% if app.request.attributes.get('_route') == "profile" %}active{% endif %}"><a href="{{ path('profile') }}">Mon profile</a></li>
+                                    <li class=""><a href="{{ path('fos_user_security_logout') }}">Se deconnecter</a></li>
+                                        
+                                    {% else %}
+
                                         <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Se connecter <span class="caret"></span></a>
                                             <div class="dropdown-menu" style="padding: 10px; padding-bottom: 10px;">
-                                                <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
-                                                  <input id="user_username" style="margin-bottom: 15px;" type="text" placeholder="Utilisateur" size="30" />
-                                                  <input id="user_password" style="margin-bottom: 15px;" type="password" placeholder="Mot de passe" size="30" />
-                                                  <input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
-                                                  <label class="string optional" for="user_remember_me">Se souvenir</label>
-                                                 
-                                                  <input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Connexion" />
-                                                </form>
+                                            <!-- login form -->
+                                            {% render url('fos_user_security_login') %}
+                                            </div>
+                                            <div>
+                                                {% block fos_user_content %}
+                                                {% endblock fos_user_content %}
                                             </div>
                                         </li>
-                                    
                                         <li class=""><a href="#">S'enregistrer</a></li>
-                                        
+                                    {% endif %}   
                                     </ul>
                                 </div>
                             </div>

@@ -22,4 +22,3 @@ profile:
 contact:
     path:     /hopital/contact
     defaults: { _controller: PPEhopitalBundle:Default:contact }
-

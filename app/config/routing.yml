@@ -1,4 +1,9 @@
+ppe_user:
+    resource: "@PPEUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 pp_ehopital:
     resource: "@PPEhopitalBundle/Resources/config/routing.yml"
     prefix:   /
-
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

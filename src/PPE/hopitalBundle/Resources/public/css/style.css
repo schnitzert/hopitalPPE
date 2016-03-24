@@ -1,5 +1,5 @@
 body{
-    background: #78CBFD;
+    background: #D9CCE6;
     padding-top: 65px;
 }
 .carousel{
@@ -13,7 +13,7 @@ body{
 
 }
 .navbar, .dropdown-menu{
-background:rgba(128,128,128,0.4);
+background:rgba(128,50,160,0.8);
 border: none;
 }
 

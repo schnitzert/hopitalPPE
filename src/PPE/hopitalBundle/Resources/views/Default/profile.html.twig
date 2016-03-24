@@ -1,4 +1,30 @@
 {% extends 'PPEhopitalBundle:Default:base.html.twig' %}
 {% block body %}
-Page profile après connexion
+<div class="container">
+
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+                <div class="list-group">
+                <a href="#" class="list-group-item active">Profile</a>
+                
+                {% if is_granted('ROLE_SECRETAIRE') %}
+                    <a href="#" class="list-group-item">Secretaire page</a>
+                {% endif %}
+
+                {% if is_granted('ROLE_PATIENT') %}
+                    <a href="#" class="list-group-item">Patient page</a>
+                    <a href="#" class="list-group-item">Patient page</a>
+                {% endif %}
+                </div>
+            </div>
+            <!-- Content Column -->
+            <div class="col-md-9">
+                <h2>Section Heading</h2>
+                <p>Information du profile ici</p>
+            </div>
+        </div>
+</div>
+    <!-- /.container -->
 {% endblock %}
